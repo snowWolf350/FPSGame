@@ -147,7 +147,7 @@ Transform:
   m_GameObject: {fileID: 49219162}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0.06, y: 0, z: 0}
   m_LocalScale: {x: 7.8526, y: 6, z: 0.5}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -466,6 +466,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::KeyPad
   promptMessage: Use Keypad
+  doors: {fileID: 421062221}
 --- !u!1 &410087039
 GameObject:
   m_ObjectHideFlags: 0
@@ -602,6 +603,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 421062222}
+  - component: {fileID: 421062223}
   m_Layer: 0
   m_Name: Door
   m_TagString: Untagged
@@ -626,6 +628,28 @@ Transform:
   - {fileID: 1463872712}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!95 &421062223
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 421062221}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: c6c39c6c1f892294eb96b694e4d05d2c, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &569241004
 GameObject:
   m_ObjectHideFlags: 0
@@ -1498,6 +1522,19 @@ MonoBehaviour:
   Layermask:
     serializedVersion: 2
     m_Bits: 64
+--- !u!114 &2135953517
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2135953508}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e615d054e5dd24143bfc30ac7feb2474, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerUI
+  promptText: {fileID: 569241006}
 --- !u!1001 &911390943046523983
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1558,6 +1595,9 @@ PrefabInstance:
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 8855954711735470255, guid: fc299c414de45e543bdeda99696000ea, type: 3}
+      insertIndex: 3
+      addedObject: {fileID: 2135953517}
     - targetCorrespondingSourceObject: {fileID: 8855954711735470255, guid: fc299c414de45e543bdeda99696000ea, type: 3}
       insertIndex: -1
       addedObject: {fileID: 2135953509}
